@@ -1,0 +1,55 @@
+DSA Tutorial - 2
+Name: Rutuparna Purandare Div: SY1-B1 PRN: B25ET1035
+Topic: Binary Search
+
+Input:
+#include <stdio.h>
+
+int binarySearch(int arr[], int low, int high, int target)
+{
+   int mid;
+   if(low > high)
+   {
+       return -1;
+   }
+   mid = (low + high) / 2;
+   if(arr[mid] == target)
+   {
+       return mid;
+   }
+   if(arr[mid] > target)
+   {
+       return binarySearch(arr, low, mid - 1, target);
+   }
+   else
+   {
+       return binarySearch(arr, mid + 1, high, target);
+   }
+}
+
+int main()
+{
+   int n, target, r, i;
+   printf("Enter the number of elements: ");
+   scanf("%d", &n);
+   int arr[n];
+   printf("Enter %d sorted elements:\n", n);
+   for(i = 0; i < n; i++)
+   {
+       scanf("%d", &arr[i]);
+   }
+   printf("Enter the element to search: ");
+   scanf("%d", &target);
+   r = binarySearch(arr, 0, n - 1, target);
+   if(r != -1)
+   {
+      printf("Element found at index: %d\n", r);
+   }
+   else
+   {
+      printf("Element not found\n");
+   }
+   return 0;
+}
+
+OUTPUT:
