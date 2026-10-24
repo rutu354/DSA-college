@@ -1,8 +1,4 @@
-DSA Tutorial - 4
-Name: Rutuparna Purandare Div: SY1-B1 PRN: B25ET1035
-Topic: Database Management using arrays of structures
 
-Input:
 #include <stdio.h>
 
 struct student
@@ -71,4 +67,4 @@ int main()
    return 0;
 }
 
-OUTPUT:
+
